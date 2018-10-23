@@ -1,0 +1,13 @@
+{application, matrix_erserve,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { matrix_erserve_app, []}},
+  {env, []}
+ ]}.
+
