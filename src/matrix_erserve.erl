@@ -1,31 +1,22 @@
 -module(matrix_erserve).
--export([init/0,
+-export([
 		version/0,
 		transpose/1,
 		multiply/2
-%		inverse/1,
-%		svd/1,
 		]).
--on_load(init/0).
-
-init() ->
-	"".
 
 version() -> 
 	exec("version$version.string").
 
-transpose(_)->
-	exit(nif_library_not_loaded).
 
-multiply(_,_)->
-	exit(nif_library_not_loaded).
+transpose(M)->
+	exec(io_lib:format("t(~s)",[matrix(M)])).
 
-%inverse(_)->
-%	exit(nif_library_not_loaded).
+multiply(A,B)->
+	exec(io_lib:format("~s%*%~s",[matrix(A),matrix(B)])).
 
-%svd(_)->
-%	exit(nif_library_not_loaded).
-
+matrix(X)->
+	"matrix(c(1,2,3,4),2,2)".
 
 exec(R)->
 	try erserve_pool:get_connection(matrix_pool) of

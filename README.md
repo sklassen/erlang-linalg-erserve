@@ -6,6 +6,21 @@ This is an erlang matrix library that runs ontop of R
 Installation
 -----
 
+The rserve library is availible from CRAN. Ubuntu users can install through apt.
+
+	> sudo apt install r-cran-rserve
+
+	> install.packages('Rserve')
+
+In an R shell, start the Rserve in daemon mode
+
+	> library(Rserve)
+	> Rserve()
+
+Then, install the erserve.git
+
+	> rebar get-deps
+
 Then, in the top directory, compile using rebar
 
 	> rebar compile
