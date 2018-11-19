@@ -4,7 +4,7 @@
 
 start(_StartType, _StartArgs) ->
 	os:cmd("/usr/lib/R/bin/R CMD /usr/lib/R/site-library/Rserve/libs/Rserve --vanilla"),
-	cybot_sup:start_link().
+	matrix_erserve_sup:start_link().
 
 stop(_State) ->
     ok.

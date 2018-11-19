@@ -30,6 +30,8 @@ Usage
 
 Only two functions are supported, transpose/1 and multiply/2
 
+	>  erl -pa ebin -pa deps/erserve/ebin/ -eval "application:start(matrix_erserve)"
+
 	Erlang R16B03 (erts-5.10.4) [source] [64-bit] 
 
 	Eshell V5.10.4  (abort with ^G)

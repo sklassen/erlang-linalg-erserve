@@ -11,9 +11,8 @@ stop(_State) ->
     ok.
 
 init([]) ->
-	Opt =[{min_size,1},{max_size,1},{max_queue_size,5},{keep_alive,true},{host,"localhost"},{port, 6311}],
 	Procs = [
-			{erserve,{erserve_pool,start_pool,[matrix_pool,Opt]},permanent,8000,worker,dynamic}
+			{matrix_erserve,{matrix_erserve,start,[]},permanent,8000,worker,dynamic}
 			],
 	{ok, {{one_for_one, 10, 10}, Procs}}.
 
