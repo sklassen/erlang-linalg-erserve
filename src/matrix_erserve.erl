@@ -6,7 +6,8 @@
 % Note R is COLMAJOR by default, We are ROWMAJOR, so we 
 
 start() ->
-	start(,[]).
+	start([]).
+
 start([]) ->
     case lists:member(?MODULE,registered()) of
         true -> {ok,whereis(?MODULE)};
@@ -50,7 +51,7 @@ matrix(M)->
 
 col2row({NR,NC,Vector})->
 	col2row({NR,NC-1,lists:nthtail(NR,Vector)},[[X]||X<-lists:sublist(Vector,NR)]).
-col2row({NR,0,[]},Acc)->
+col2row({_NR,0,[]},Acc)->
 	[lists:reverse(R)||R<-Acc];
 col2row({NR,NC,Vector},Acc) ->
 	col2row({NR,NC-1,lists:nthtail(NR,Vector)},[[H|T]||{H,T}<-lists:zip(lists:sublist(Vector,NR),Acc)]).

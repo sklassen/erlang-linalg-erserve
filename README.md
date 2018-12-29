@@ -6,14 +6,13 @@ This is an erlang matrix library that runs ontop of R
 Installation
 -----
 
-The rserve library is availible from CRAN. Ubuntu users can install through apt.
+Ubuntu users can install through apt. This will start the daemon automatically.
 
 	> sudo apt install r-cran-rserve
 
+Alternatively, the rserve library is availible from CRAN. In an R shell, start the Rserve in daemon mode
+
 	> install.packages('Rserve')
-
-In an R shell, start the Rserve in daemon mode
-
 	> library(Rserve)
 	> Rserve()
 
