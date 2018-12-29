@@ -1,20 +1,25 @@
 Erlang Matrix Functions via eRserve
 ============================
 
-This is an erlang matrix library that runs ontop of R
+This is an Erlang matrix library that runs on top of R
 
-Installation
+Prerequisites
 -----
 
-Ubuntu users can install through apt. This will start the daemon automatically.
+For Ubuntu users, eRserve can install through apt. This will start the daemon automatically.
 
 	> sudo apt install r-cran-rserve
 
-Alternatively, the rserve library is availible from CRAN. In an R shell, start the Rserve in daemon mode
+Alternatively, the rserve library is available from CRAN. In an R shell, start the Rserve in daemon mode
 
 	> install.packages('Rserve')
 	> library(Rserve)
 	> Rserve()
+
+Either way, the app expects reserve to respond on port 6311
+
+Installation
+-----
 
 Then, install the erserve.git
 
