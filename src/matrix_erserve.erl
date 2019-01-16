@@ -28,7 +28,7 @@ rpc(Q) ->
                     {?MODULE, error} -> erlang:error(error);
                     {?MODULE, Reply} -> Reply
                 end;
-        false -> erlang:error(not_running)
+        false -> start(),rpc(Q)
     end.
 
 stop() -> rpc(stop).
