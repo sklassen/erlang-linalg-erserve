@@ -1,5 +1,5 @@
--module(matrix_erserve_tests). 
--import(matrix_erserve,[transpose/1,multiply/2]).
+-module(linalg_r_tests). 
+-import(linalg_r,[transpose/1,multiply/2]).
 -include_lib("eunit/include/eunit.hrl").
 
 transpose_1_test() ->

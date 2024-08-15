@@ -1,0 +1,4 @@
+[{<<"erserve">>,
+  {git,"https://github.com/del/erserve.git",
+       {ref,"724d19448e1e91d9808f799c96e61ef67fb48b9d"}},
+  0}].

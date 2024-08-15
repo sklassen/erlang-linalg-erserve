@@ -1,4 +1,4 @@
--module(matrix_erserve).
+-module(linalg_r).
 -export([start/0,start/1, stop/0]).
 -export([version/0, transpose/1, multiply/2]).
 -export([col2row/1, matrix/1]).
@@ -9,6 +9,7 @@ start() ->
     start([]).
 
 start([]) ->
+    application:start(erserve),
     case lists:member(?MODULE,registered()) of
         true -> {ok,whereis(?MODULE)};
         false -> register(?MODULE, spawn(fun() -> init() end)),{ok,whereis(?MODULE)}

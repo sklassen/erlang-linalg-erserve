@@ -1,13 +1,14 @@
-{application, matrix_erserve,
+{application, linalg_r,
  [
   {description, ""},
   {vsn, "1"},
   {registered, []},
   {applications, [
                   kernel,
-                  stdlib
+                  stdlib,
+                  erserve
                  ]},
-  {mod, { matrix_erserve_app, []}},
+  {mod, { linalg_r_app, []}},
   {env, []}
  ]}.
 
