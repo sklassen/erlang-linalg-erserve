@@ -12,7 +12,7 @@ stop(_State) ->
 
 init([]) ->
   Procs = [
-           {linalg_r,{linalg_r,start,[]},permanent,8000,worker,dynamic}
+           {linalg_r,{linalg_r_srv,start,[]},permanent,8000,worker,dynamic}
           ],
   {ok, {{one_for_one, 10, 10}, Procs}}.
 

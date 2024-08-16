@@ -1,6 +1,6 @@
 {application, linalg_r,
  [
-  {description, ""},
+  {description, "linalg via the r engine"},
   {vsn, "1"},
   {registered, []},
   {applications, [
